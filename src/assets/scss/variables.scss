@@ -1,0 +1,65 @@
+$font-xs: 0.7rem;
+$font-sm: 0.85rem;
+$font-md: 1rem;
+$font-lg: 1.15rem;
+$font-xl: 1.3rem;
+
+$size-values: (
+  xs: $font-xs,
+  sm: $font-sm,
+  md: $font-md,
+  lg: $font-lg,
+  xl: $font-xl
+);
+
+@each $size, $value in $size-values {
+  .size-#{$size} {
+    font-size: $value;
+  }
+
+  .dp__input {
+    --dp-font-size-#{$size}: $value;
+  }
+}
+
+$type-values: (
+  primary: (
+    $primary,
+    $white,
+  ),
+  secondary: (
+    $primary,
+    $black,
+  ),
+  success: (
+    $success,
+    $white,
+  ),
+  alert: (
+    $warning,
+    $white,
+  ),
+  error: (
+    $error,
+    $white,
+  ),
+  cancel: (
+    $cancel,
+    $primary-text-color,
+  ),
+  info: (
+    $info,
+    $white,
+  ),
+  disabled: (
+    $disabled,
+    $white,
+  ),
+);
+
+@each $type, $value in $type-values {
+  .type-#{$type} {
+    background-color: nth($value, 1);
+    color: nth($value, 2);
+  }
+}
