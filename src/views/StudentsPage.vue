@@ -1,10 +1,12 @@
 <template>
-  <div class="students-page-wrapper">
-    <student-card
-      v-for="(student, index) in students"
-      :key="index"
-      :student="student"
-    />
+  <div>
+    <div class="students-page-wrapper">
+      <student-card
+        v-for="(student, index) in students"
+        :key="index"
+        :student="student"
+      />
+    </div>
   </div>
 </template>
 
@@ -19,12 +21,12 @@ export default {
     };
   },
   methods: {
-    async getAllSutudents() {
+    async getAllStudents() {
       this.students = await this.$store.dispatch("user/getAll");
     },
   },
   mounted() {
-    this.getAllSutudents();
+    this.getAllStudents();
   },
 };
 </script>

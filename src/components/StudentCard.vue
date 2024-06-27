@@ -6,7 +6,9 @@
       label="Öğrenciyi Görüntüle"
       type="info"
       @click="goToStudentPage(student._id)"
+      
     />
+    
   </div>
 </template>
 
