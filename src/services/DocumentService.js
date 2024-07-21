@@ -8,6 +8,18 @@ class DocumentService extends APIServiceBase {
       data,
     });
   }
+  // userDocuments(userID) {
+  //   return this.http({
+  //     method: "GET",
+  //     url: this.url + `uploadDocument/${userID}`,
+  //   });
+  // }
+  getAllDocumentsWithUser() {
+    return this.http({
+      method: "GET",
+      url: this.url + `getAllWithUser`,
+    });
+  }
 }
 
 export default function DocumentAPI(api, apiDocument) {

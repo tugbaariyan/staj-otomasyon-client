@@ -48,6 +48,14 @@ const routes = [
       isDefaultLayout: true,
     },
   },
+  {
+    path: "/all-documents",
+    name: "documents",
+    component: () => import("@/views/DocumentsPage.vue"),
+    meta: {
+      isDefaultLayout: true,
+    },
+  },
 ];
 
 const router = createRouter({
