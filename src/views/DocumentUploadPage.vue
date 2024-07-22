@@ -100,6 +100,7 @@ export default {
             formData
           );
           alert(response.message);
+          this.$router.push({ name: "intern" });
         }
       } catch (error) {
         console.error("Document upload failed:", error);

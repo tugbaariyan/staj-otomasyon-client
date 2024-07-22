@@ -1,5 +1,6 @@
 <template>
   <div class="pdf-viewer">
+    <h2 v-if="showTitle">{{ pdfFile.originalName }}</h2>
     <canvas ref="pdfCanvas"></canvas>
   </div>
 </template>
@@ -12,6 +13,7 @@ export default {
       type: Object,
       required: true,
     },
+    showTitle: { type: Boolean, default: false },
   },
   mounted() {
     this.renderPdf();

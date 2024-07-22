@@ -56,6 +56,14 @@ const routes = [
       isDefaultLayout: true,
     },
   },
+  {
+    path: "/intern",
+    name: "intern",
+    component: () => import("@/views/InternPage.vue"),
+    meta: {
+      isDefaultLayout: true,
+    },
+  },
 ];
 
 const router = createRouter({

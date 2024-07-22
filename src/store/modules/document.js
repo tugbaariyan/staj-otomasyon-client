@@ -23,6 +23,30 @@ export default (api) => {
           return response.data;
         }
       },
+      async getAllDocuments() {
+        const response = await service.getAllDocuments();
+        if (response.status == 200) {
+          return response.data;
+        }
+      },
+      async getDocumentWithUserID(_, payload) {
+        const response = await service.getDocumentByUserID(payload);
+        if (response.status == 200) {
+          return response.data;
+        }
+      },
+      async updateDocument(_, payload) {
+        const response = await service.updateDocument(payload);
+        if (response.status == 200) {
+          return response.data;
+        }
+      },
+      async updateDocumentStatus(_, payload) {
+        const response = await service.updateDocumentStatus(payload);
+        if (response.status == 200) {
+          return response.data;
+        }
+      },
     },
     getters: {},
   };

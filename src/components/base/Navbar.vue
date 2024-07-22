@@ -12,9 +12,8 @@
         v-if="userRole === 'teacher'"
         @click="goToStudentsPage"
       />
-      <ui-button label="Belge Yükle" v-else @click="goToInternPage" />
+      <ui-button label="Stajım" v-else @click="goToInternPage" />
       <ui-button label="Çıkış Yap" @click="signOut" />
-      {{ userRole }}
     </div>
   </nav>
 </template>
@@ -24,7 +23,7 @@ export default {
   name: "Navbar",
   methods: {
     goToInternPage() {
-      this.$router.push({ name: "fileUpload" });
+      this.$router.push({ name: "intern" });
     },
     goToStudentsPage() {
       this.$router.push("/all-students");

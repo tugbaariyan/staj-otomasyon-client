@@ -1,5 +1,5 @@
 <template>
-  <div class="students-page-wrapper">
+  <div class="documents-page-wrapper">
     <div v-for="(data, index) in datas" :key="index">
       <div v-for="(document, i) in data.fileData" :key="i">
         <PDFViewer :pdfFile="document" />
@@ -24,7 +24,6 @@ export default {
       this.datas = await this.$store.dispatch(
         "document/getAllDocumentsWithUser"
       );
-      console.log(this.datas);
     },
   },
   mounted() {
@@ -34,7 +33,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.students-page-wrapper {
+.documents-page-wrapper {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;

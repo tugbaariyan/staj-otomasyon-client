@@ -26,10 +26,14 @@ export default {
   align-items: center;
   height: 100vh;
   width: 100%;
+  overflow: hidden;
 }
 .router-view {
+  display: flex;
+  justify-content: center;
   height: 100%;
-  width: 80%;
-  padding: 1rem;
+  width: 90%;
+  padding: 1rem 4rem;
+  overflow: hidden;
 }
 </style>
