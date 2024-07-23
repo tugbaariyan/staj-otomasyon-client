@@ -47,6 +47,12 @@ export default (api) => {
           return response.data;
         }
       },
+      async getDocumentsWithStatus(_, payload) {
+        const response = await service.getDocumentsWithStatus(payload);
+        if (response.status == 200) {
+          return response.data;
+        }
+      },
     },
     getters: {},
   };

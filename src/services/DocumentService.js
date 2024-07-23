@@ -40,6 +40,12 @@ class DocumentService extends APIServiceBase {
       data,
     });
   }
+  getDocumentsWithStatus(status) {
+    return this.http({
+      method: "GET",
+      url: this.url + `getDocumentsWithStatus/${status}`,
+    });
+  }
 }
 
 export default function DocumentAPI(api, apiDocument) {
